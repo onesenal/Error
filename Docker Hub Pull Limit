@@ -1,0 +1,11 @@
+﻿Docker Hub Pull Limit
+관련 사이트 : https://subicura.com/k8s/2021/01/02/docker-hub-pull-limit/
+cat <<EOF >> /inventory/group_vars/all/containerd.yml
+# cat <<EOF는 End Of File의 약자이며, 직접 입력한 텍스트를 파일 끝부분에 저장할 때 사용합니다. 
+containerd_registries:
+  "docker.io": "https://registry-1.docker.io"     # Docker registry 주소
+containerd_registry_auth:
+  - registry: registry-1.docker.io     # registry 명
+    username: dockerUserId     # Docker ID 입력
+    password: dockerUserPw     # Docker PW 입력
+EOF     # 마지막에 EOF를 써줘야 합니다.

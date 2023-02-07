@@ -1,8 +1,4 @@
 node {
-  def app
-  def dockerfile
-  def anchorefile
-	
   try {
     stage('Checkout') {
       // Clone the git repository

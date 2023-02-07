@@ -1,16 +1,10 @@
-node {
-  def app
-  def dockerfile
-  def anchorefile
-	
-  try {
+ node {
     stage('Checkout') {
       // Clone the git repository
       checkout scm
       def path = sh returnStdout: true, script: "pwd"
       path = path.trim()
       dockerfile = path + "/Dockerfile"
-      anchorefile = path + "/anchore_images"
     }
     stage('OWASP Dependency-Check Vulnerabilities ') {
     dependencyCheck additionalArguments: '''
@@ -36,5 +30,4 @@ node {
 	      -Dsonar.dependencyCheck.htmlReportPath=./report/dependency-check-report.html"
         }
     }
-  }
 }

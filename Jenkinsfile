@@ -12,7 +12,6 @@ node {
       dockerfile = path + "/Dockerfile"
       anchorefile = path + "/anchore_images"
     }
-  }
     stage('OWASP Dependency-Check Vulnerabilities ') {
     dependencyCheck additionalArguments: '''
 	    -s "." 
@@ -37,4 +36,5 @@ node {
 	      -Dsonar.dependencyCheck.htmlReportPath=./report/dependency-check-report.html"
         }
     }
+  }
 }

@@ -19,9 +19,9 @@
         def scannerHome = tool 'sonarqube';
         withSonarQubeEnv('sonarserver'){
             sh "${scannerHome}/bin/sonar-scanner \
-	      -Dsonar.projectKey=project \
+	      -Dsonar.projectKey=innogrid \
 	      -Dsonar.host.url=http://192.168.160.229:9000 \
-	      -Dsonar.login=401075392cce1b871a7cf57e81597e18958e22cb \
+	      -Dsonar.login=0c50fc8e6a4e1a3a7a5104f0f045367b354fbd0a \
 	      -Dsonar.sources=. \
 	      -Dsonar.report.export.path=sonar-report.json \
 	      -Dsonar.exclusions=report/* \

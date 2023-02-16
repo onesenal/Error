@@ -1,2 +1,2 @@
-FROM busybox:latest 
+FROM openjdk:11-jdk
 HEALTHCHECK NONE

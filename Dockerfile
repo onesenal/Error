@@ -1,1 +1,1 @@
-FROM python:3.9-slim
+FROM s1an/nodehealthcheck:latestfromsys

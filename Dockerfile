@@ -1,2 +1,2 @@
-FROM openjdk:11-jdk
+FROM python:3.9-slim
 HEALTHCHECK NONE

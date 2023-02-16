@@ -1,2 +1,2 @@
-FROM gcr.io/distroless/base-debian10
+FROM busybox:latest 
 HEALTHCHECK NONE

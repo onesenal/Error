@@ -1,2 +1,1 @@
-FROM s1an/nodehealthcheck:latestfromsys
-RUN = hel["CreatedBy"] 
+FROM gcr.io/distroless/base-debian10
